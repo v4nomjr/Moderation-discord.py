@@ -11,7 +11,7 @@ class ban(commands.Cog):
     async def ban(self, ctx, member: discord.Member = None, *, reason=None):
         if member == None:
             embed = discord.Embed(
-                description='❎ Please specify a user to ban', color=discord.Color.dark_purple())
+                description='❎ Missing requirements: No specified member.', color=discord.Color.dark_purple())
             await ctx.send(embed=embed)
         else:
             await member.ban(reason=reason)
