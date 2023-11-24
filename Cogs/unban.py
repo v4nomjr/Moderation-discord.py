@@ -11,7 +11,7 @@ class idk(commands.Cog):
     async def unban(self, ctx, *, member=None):
         if member == None:
             embed = discord.Embed(
-                description='❎ Please specify a user to unban', color=discord.Color.dark_purple())
+                description='❎ Missing requirements: No specified member.', color=discord.Color.dark_purple())
             await ctx.send(embed=embed)
         else:
             banned_users = await ctx.guild.bans()
